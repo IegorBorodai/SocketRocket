@@ -20,7 +20,7 @@
 
 @implementation NSData (SRB64Additions)
 
-- (NSString *)SR_stringByBase64Encoding;
+- (NSString *)SR_stringByBase64Encoding
 {
     size_t buffer_size = (([self length] * 3 + 2) / 2);
     

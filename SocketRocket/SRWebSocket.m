@@ -141,7 +141,7 @@ static NSString *newSHA1String(const char *bytes, size_t length) {
 
 @implementation NSData (SRWebSocket)
 
-- (NSString *)stringBySHA1ThenBase64Encoding;
+- (NSString *)stringBySHA1ThenBase64Encoding
 {
     return newSHA1String(self.bytes, self.length);
 }
@@ -300,7 +300,7 @@ static __strong NSData *CRLFCRLF;
 
 - (id)initWithURLRequest:(NSURLRequest *)request protocols:(NSArray *)protocols;
 {
-    self = [super init];
+    (self = [super init]);
     if (self) {
         assert(request.URL);
         _url = request.URL;
@@ -1521,7 +1521,7 @@ static const size_t SRFrameHeaderOverhead = 32;
 
 - (id)initWithBufferCapacity:(NSUInteger)poolSize;
 {
-    self = [super init];
+    (self = [super init]);
     if (self) {
         _poolSize = poolSize;
         _bufferedConsumers = [[NSMutableArray alloc] initWithCapacity:poolSize];
@@ -1724,7 +1724,7 @@ static NSRunLoop *networkRunLoop = nil;
 
 - (id)init
 {
-    self = [super init];
+    (self = [super init]);
     if (self) {
         _waitGroup = dispatch_group_create();
         dispatch_group_enter(_waitGroup);
